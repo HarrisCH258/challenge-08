@@ -10,8 +10,8 @@ class Motorbike extends Vehicle {
   model: string;
   year: number;
   weight: number;
-  topspeed: number;
-  Wheels: wheel[];
+  topSpeed: number;
+  wheels: Wheel[];
 
   constructor(
     vin: string,
@@ -55,7 +55,17 @@ class Motorbike extends Vehicle {
  } 
   // TODO: Implement the wheelie method
     // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
-
+override printDetails(): void {
+  super.printDetails();
+  console.log(`VIN: ${this.vin}`);
+  console.log(`Make: ${this.make}`);
+  console.log(`Model: ${this.model}`);
+  console.log(`Year: ${this.year}`);
+  console.log(`Weight: ${this.year}lbs`);
+  console.log(`Top Speed: ${this.topSpeed} mph`);
+  console.log(`Color: ${this.color}`);
+  console.log(`Wheels: ${this.wheels}`);
+}
   // TODO: Override the printDetails method from the Vehicle class
   // TODO: The method should call the printDetails method of the parent class
   // TODO: The method should log the details of the Motorbike
